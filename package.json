@@ -22,8 +22,16 @@
   },
   "homepage": "https://github.com/Kamalimoghadam/github-graphql#readme",
   "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@reduxjs/toolkit": "^1.9.1",
+    "@types/react-bootstrap": "^0.32.32",
+    "@types/react-redux": "^7.1.24",
+    "bootstrap": "^5.2.3",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.4"
   },
   "devDependencies": {
