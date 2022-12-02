@@ -1,11 +1,22 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloClient, DefaultOptions, InMemoryCache } from '@apollo/client'
+
+const defaultOptions: DefaultOptions = {
+  watchQuery: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'ignore',
+  },
+  query: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'all',
+  },
+}
 
 export const config = new ApolloClient({
   uri: 'https://api.github.com/graphql',
   cache: new InMemoryCache(),
+  defaultOptions: defaultOptions,
   headers: {
-    authorization:
-      'Authorization: Bearer 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',
+    authorization: 'Bearer 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',
   },
 })
 
