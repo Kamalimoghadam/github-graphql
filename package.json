@@ -8,7 +8,8 @@
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,9 @@
   "homepage": "https://github.com/Kamalimoghadam/github-graphql#readme",
   "dependencies": {
     "@apollo/client": "^3.7.1",
+    "@graphql-codegen/cli": "2.15.0",
+    "@graphql-codegen/typescript": "2.8.3",
+    "@graphql-codegen/typescript-react-apollo": "3.3.7",
     "@reduxjs/toolkit": "^1.9.1",
     "@types/react-bootstrap": "^0.32.32",
     "@types/react-redux": "^7.1.24",
@@ -67,7 +71,10 @@
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "^5.7.3",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@graphql-codegen/cli": "2.15.0",
+    "@graphql-codegen/client-preset": "1.2.1"
   },
   "husky": {
     "hooks": {
