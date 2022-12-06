@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const { EnvironmentPlugin } = require('webpack')
 
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
@@ -13,7 +12,8 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new EnvironmentPlugin({
-      API: ""
-    })
+      GITHUB_GQL_URL: 'https://api.github.com/graphql',
+      GITHUB_TOKEN: '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',
+    }),
   ],
 }

@@ -1,19 +1,23 @@
-
-import type { CodegenConfig } from '@graphql-codegen/cli';
+import type { CodegenConfig } from '@graphql-codegen/cli'
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: "https://api.github.com/graphql",
-  documents: "**/*.{gql,graphql}",
-  generates: {
-    "graphql/generated/schema.ts": {
-      preset: "client",
-      plugins: []
+  schema: [
+    {
+      'https://api.github.com/graphql': {
+        headers: {
+          Authorization: 'Bearer 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',
+        },
+      },
     },
-    "./graphql.schema.json": {
-      plugins: ["introspection"]
-    }
-  }
-};
+  ],
+  documents: '**/*.{gql,graphql}',
+  generates: {
+    './src/graphql/gql/': {
+      preset: 'client',
+      plugins: [],
+    },
+  },
+}
 
-export default config;
+export default config
